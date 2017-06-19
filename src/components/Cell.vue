@@ -18,8 +18,6 @@
             return {
                 hero: '',
                 heroes,
-                selected: '',
-                frozen: false,
                 filterInput: ''
             }
         },
@@ -31,17 +29,12 @@
                 });
             },
             selectHero (heroPicked) {
-                if (! this.frozen) {
-                    this.hero = heroes[heroPicked].name;
-                    this.$parent.selectedHero = heroPicked;
-                    this.frozen = true;
-                    Event.$emit('selectHero', this.name)
-                }
+                this.hero = heroes[heroPicked].name;
+                this.$parent.selectedHero = heroPicked;
+                Event.$emit('selectHero', this.name)
             }
         },
-        created () {
-            Event.$on('freeze', () => this.frozen = true)
-        }
+
     }
 </script>
 

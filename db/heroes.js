@@ -8,6 +8,40 @@ export const heroes = [
             "Carry",
             "Escape",
             "Nuker"
+        ],
+        "bad_against": [
+            "Axe",
+            "Bane",
+            "Bloodseeker",
+            "Disruptor",
+            "Doom",
+            "Drow Ranger",
+            "Legion Commander",
+            "Meepo",
+            "Night Stalker",
+            "Outworld Devourer",
+            "Phantom Assassin",
+            "Slardar",
+            "Shadow Demon",
+            "Templar Assassin",
+            "Tiny",
+            "Troll Warlord"
+        ],
+        "good_against": [
+            "Ancient Apparition",
+            "Arc Warden",
+            "Clockwerk",
+            "Elder Titan",
+            "Medusa",
+            "Morphling",
+            "Phoenix",
+            "Pugna",
+            "Spectre",
+            "Storm Spirit",
+            "Undying",
+            "Venomancer",
+            "Wraith King",
+            "Zeus"
         ]
     },
     {
@@ -20,6 +54,32 @@ export const heroes = [
             "Durable",
             "Disabler",
             "Jungler"
+        ],
+        "bad_against": [
+            "Doom",
+            "Jakiro",
+            "Lifestealer",
+            "Necrophos",
+            "Outworld Devourer",
+            "Shadow Demon",
+            "Spectre",
+            "Timbersaw",
+            "Ursa",
+            "Viper"
+        ],
+        "good_against": [
+            "Broodmother",
+            "Chaos Knight",
+            "Dazzle",
+            "Huskar",
+            "Legion Commander",
+            "Nature's Prophet",
+            "Phantom Assassin",
+            "Phantom Lancer",
+            "Slark",
+            "Terrorblade",
+            "Troll Warlord",
+            "Weaver"
         ]
     },
     {
