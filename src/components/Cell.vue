@@ -16,9 +16,10 @@
         props: ['name'],
         data () {
             return {
-                hero: '',
+                hero: '', // printed
                 heroes,
-                filterInput: ''
+                filterInput: '',
+                frozen: false, // can't re-pick cell
             }
         },
         methods: {
@@ -29,12 +30,17 @@
                 });
             },
             selectHero (heroPicked) {
-                this.hero = heroes[heroPicked].name;
-                this.$parent.selectedHero = heroPicked;
-                Event.$emit('selectHero', this.name)
+                if (! this.frozen) {
+                    this.hero = heroes[heroPicked].name;
+                    this.frozen = true;
+                    this.$parent.selectedHero = heroPicked;
+                    Event.$emit('selectHero', this.name)
+                }
+            },
+            created () {
+                Event.$on('freeze', () => this.frozen = true)
             }
-        },
-
+        }
     }
 </script>
 

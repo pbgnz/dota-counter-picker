@@ -14,20 +14,23 @@
             return {
                 pick: [],
                 avoid: [],
+                selected: [],
                 results: []
             }
         },
         methods: {
-            updateResults (pick, avoid) {
+            updateResults (pick, avoid, selected) {
                 this.results = union(this.results, pick);
                 this.results = difference(this.results, avoid);
+                this.results = difference(this.results, selected);
             }
         },
         created () {
             Event.$on('heroSelected', (heroArrayId) => {
+                this.selected = this.$parent.selected;
                 this.pick = heroes[heroArrayId].bad_against;
                 this.avoid = heroes[heroArrayId].good_against;
-                this.updateResults(this.pick, this.avoid);
+                this.updateResults(this.pick, this.avoid, this.selected);
             })
         }
     }

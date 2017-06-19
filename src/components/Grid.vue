@@ -21,20 +21,25 @@
         components: { Cell, Results },
         data () {
             return {
-                1: '', // array Index in heroes
-                2: '',
-                3: '',
-                4: '',
-                5: '',
+                selected: [],
                 cells: {
-                    1: '', 2: '', 3: '',
-                    4: '', 5: ''
+                    1: 'no hero', 2: 'no hero', 3: 'no hero',
+                    4: 'no hero', 5: 'no hero'
                 }
             }
+        },
+        methods: {
+          getSelectedHeroes() {
+              this.selected = [];
+              for (let i = 1; i<6; i++)
+                  if(this.cells[i] !== 'no hero')
+                      this.selected.push(heroes[this.cells[i]].name);
+          }
         },
         created () {
             Event.$on('selectHero', (cellNumber) => {
                 this.cells[cellNumber] = this.selectedHero;
+                this.getSelectedHeroes();
                 Event.$emit('heroSelected', this.cells[cellNumber])
             })
         }
