@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import { union } from 'lodash';
+    import { union, difference } from 'lodash';
     import { heroes } from '../../db/heroes';
     export default {
         data () {
@@ -20,6 +20,7 @@
         methods: {
             updateResults (pick, avoid) {
                 this.results = union(this.results, pick);
+                this.results = difference(this.results, avoid);
             }
         },
         created () {
