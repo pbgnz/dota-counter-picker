@@ -10,12 +10,7 @@
   import Grid from './components/Grid.vue';
   export default {
     name: 'app',
-    components: { Grid },
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App',
-      }
-    }
+    components: { Grid }
   }
 </script>
 

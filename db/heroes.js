@@ -92,6 +92,21 @@ export const heroes = [
             "Disabler",
             "Nuker",
             "Durable"
+        ],
+        "bad_against": [
+            "Phantom Lancer",
+            "Slark",
+            "Chaos Knight",
+            "Razor",
+            "Pudge"
+        ],
+        "good_against": [
+            "Medusa",
+            "Phantom Assassin",
+            "Dazzle",
+            "Dark Seer",
+            "Faceless Void",
+            "Bloodseeker"
         ]
     },
     {
@@ -105,6 +120,31 @@ export const heroes = [
             "Jungler",
             "Nuker",
             "Initiator"
+        ],
+        "bad_against": [
+            "Abaddon",
+            "Dazzle",
+            "Ember Spirit",
+            "Faceless Void",
+            "Medusa",
+            "Morphling",
+            "Omniknight",
+            "Storm Spirit",
+            "Techies",
+            "Troll Warlord",
+            "Underlord"
+        ],
+        "good_against": [
+            "Anti-Mage",
+            "Clinkz",
+            "Huskar",
+            "Meepo",
+            "Riki",
+            "Slark",
+            "Sniper",
+            "Timbersaw",
+            "Weaver",
+            "Windranger"
         ]
     },
     {
@@ -117,6 +157,24 @@ export const heroes = [
             "Disabler",
             "Nuker",
             "Jungler"
+        ],
+        "bad_against": [
+            "Ancient Apparition",
+            "Bristleback",
+            "Clockwerk",
+            "Doom",
+            "Earth Spirit",
+            "Legion Commander",
+            "Naga Siren",
+            "Nyx Assassin",
+            "Tidehunter",
+            "Tusk",
+            "Visage"
+        ],
+        "good_against": [
+            "Slark",
+            "Phantom Assassin",
+            "Templar Assassin"
         ]
     },
     {

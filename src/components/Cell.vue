@@ -1,13 +1,11 @@
 <template>
-    <div class="cell">
-        <h3>{{ hero }}</h3>
-        <input placeholder="Enter hero" v-model="filterInput" />
-        <ul>
-            <li v-for="hero in filterBy(heroes, filterInput)">
-                <div @click="selectHero(hero.id-1)">{{ hero.name }}</div>
-            </li>
-        </ul>
-    </div>
+    <ul class="cell">
+        <li v-for="hero in picks">
+            <h3>{{ hero.name }}</h3>
+            <h3>{{ hero.primary_attr }}</h3>
+            <h3>{{ hero.attack_type }}</h3>
+        </li>
+    </ul>
 </template>
 
 <script>
@@ -16,30 +14,14 @@
         props: ['name'],
         data () {
             return {
-                hero: '', // printed
-                heroes,
-                filterInput: '',
-                frozen: false, // can't re-pick cell
+                picks: [],
+                heroes
             }
         },
-        methods: {
-            filterBy (list, value) {
-                value = value.charAt(0).toUpperCase() + value.slice(1);
-                return list.filter(function(hero) {
-                    return hero.name.indexOf(value) > -1;
-                });
-            },
-            selectHero (heroPicked) {
-                if (! this.frozen) {
-                    this.hero = heroes[heroPicked].name;
-                    this.frozen = true;
-                    this.$parent.selectedHero = heroPicked;
-                    Event.$emit('selectHero', this.name)
-                }
-            },
-            created () {
-                Event.$on('freeze', () => this.frozen = true)
-            }
+        created () {
+            Event.$on('heroSelected', (heroArrayId) => {
+                this.picks.push(heroes[heroArrayId]);
+            })
         }
     }
 </script>
@@ -47,5 +29,6 @@
 <style>
     .cell {
         font-family: 'Gochi Hand', sans-serif;
+        color: black;
     }
 </style>

@@ -1,30 +1,29 @@
 <template>
     <div>
-        <results></results>
+        <search></search>
         <table class="grid">
-            <tr>
-                <td><cell name="1"></cell></td>
-                <td><cell name="2"></cell></td>
-                <td><cell name="3"></cell></td>
-                <td><cell name="4"></cell></td>
-                <td><cell name="5"></cell></td>
-            </tr>
+            <cell></cell>
         </table>
+        <results></results>
     </div>
 </template>
 
 <script>
+    import Search from './Search.vue';
     import Cell from './Cell.vue';
     import Results from './Results.vue';
     import { heroes } from '../../db/heroes';
     export default {
-        components: { Cell, Results },
+        components: { Search, Cell, Results },
         data () {
             return {
                 selected: [],
                 cells: {
-                    1: 'no hero', 2: 'no hero', 3: 'no hero',
-                    4: 'no hero', 5: 'no hero'
+                    1: 'no hero',
+                    2: 'no hero',
+                    3: 'no hero',
+                    4: 'no hero',
+                    5: 'no hero'
                 }
             }
         },
@@ -33,14 +32,14 @@
               this.selected = [];
               for (let i = 1; i<6; i++)
                   if(this.cells[i] !== 'no hero')
-                      this.selected.push(heroes[this.cells[i]].name);
+                      this.selected.push(this.cells[i].name);
           }
         },
         created () {
-            Event.$on('selectHero', (cellNumber) => {
-                this.cells[cellNumber] = this.selectedHero;
+            Event.$on('selectHero', (heroObject, cellNumber) => {
+                this.cells[cellNumber] = heroObject;
                 this.getSelectedHeroes();
-                Event.$emit('heroSelected', this.cells[cellNumber])
+                Event.$emit('heroSelected', this.cells[cellNumber].id - 1)
             })
         }
     }
@@ -48,7 +47,7 @@
 
 <style>
     .grid {
-        background-color: #34495e;
+        // background-color: #34495e;
         color: #fff;
         width: 100%;
     }
