@@ -73,7 +73,7 @@ export const heroes = [
             "Dazzle",
             "Huskar",
             "Legion Commander",
-            "Nature's Prophet",
+            "Natures Prophet",
             "Phantom Assassin",
             "Phantom Lancer",
             "Slark",
@@ -186,6 +186,20 @@ export const heroes = [
             "Carry",
             "Disabler",
             "Pusher"
+        ],
+        "bad_against": [
+            "Broodmother",
+            "Clockwerk",
+            "Huskar",
+            "Lycan",
+            "Riki",
+            "Phantom Lancer"
+        ],
+        "good_against": [
+            "Ember Spirit",
+            "Juggernaut",
+            "Anti-Mage",
+            "Weaver"
         ]
     },
     {
@@ -198,6 +212,26 @@ export const heroes = [
             "Initiator",
             "Disabler",
             "Nuker"
+        ],
+        "bad_against": [
+            "Clockwerk",
+            "Disruptor",
+            "Earth Spirit",
+            "Lifestealer",
+            "Phoenix",
+            "Skywrath Mage",
+            "Sniper",
+            "Spectre",
+            "Zeus"
+        ],
+        "good_against": [
+            "Enigma",
+            "Broodmother",
+            "Chaos Knight",
+            "Meepo",
+            "Naga Siren",
+            "Natures Prophet",
+            "Phantom Lancer"
         ]
     },
     {
@@ -209,6 +243,21 @@ export const heroes = [
             "Carry",
             "Pusher",
             "Escape"
+        ],
+        "bad_against": [
+            "Phantom Lancer",
+            "Clinkz",
+            "Axe",
+            "Outworld Devourer",
+            "Ursa"
+        ],
+        "good_against": [
+            "Invoker",
+            "Keeper of the Light",
+            "Necrophos",
+            "Phoenix",
+            "Templar Assassin",
+            "Zeus"
         ]
     },
     {
@@ -222,6 +271,20 @@ export const heroes = [
             "Escape",
             "Nuker",
             "Disabler"
+        ],
+        "bad_against": [
+            "Puck",
+            "Abaddon",
+            "Meepo",
+            "Huskar",
+            "Arc Warden",
+            "Slark"
+        ],
+        "good_against": [
+            "Drow Ranger",
+            "Crystal Maiden",
+            "Witch Doctor",
+            "Techies"
         ]
     },
     {
@@ -235,6 +298,27 @@ export const heroes = [
             "Durable",
             "Nuker",
             "Disabler"
+        ],
+        "bad_against": [
+            "Ancient Apparition",
+            "Anti-Mage",
+            "Arc Warden",
+            "Earth Spirit",
+            "Ember Spirit",
+            "Elder Titan",
+            "Lion",
+            "Lifestealer",
+            "Meepo",
+            "Outworld Devourer",
+            "Rubick",
+            "Skywrath Mage"
+        ],
+        "good_against": [
+            "Bloodseeker",
+            "Drow Ranger",
+            "Lone Druid",
+            "Phantom Assassin",
+            "Sniper"
         ]
     },
     {
