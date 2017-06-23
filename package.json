@@ -5,8 +5,10 @@
   "author": "pbgnz",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "postInstall": "npm run build"
   },
   "dependencies": {
     "lodash": "^4.17.4",
