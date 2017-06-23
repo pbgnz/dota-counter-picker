@@ -1,4 +1,3 @@
-# dota-counter-picker
+### dota-counter-picker  
 
-dota2 counter picker web app
-
+https://dota-counter-picker.herokuapp.com/
