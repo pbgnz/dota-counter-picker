@@ -4,6 +4,7 @@ export const heroes = [
         "name":"Anti-Mage",
         "primary_attr":"agi",
         "attack_type":"Melee",
+        "img": "https://user-images.githubusercontent.com/20388583/27767004-fa76a52a-5eb3-11e7-8765-5d8afd10ef53.png",
         "roles":[
             "Carry",
             "Escape",
@@ -49,6 +50,7 @@ export const heroes = [
         "name":"Axe",
         "primary_attr":"str",
         "attack_type":"Melee",
+        "img": "https://user-images.githubusercontent.com/20388583/27767019-48f52866-5eb4-11e7-8cdd-65f8a85587ff.png",
         "roles":[
             "Initiator",
             "Durable",
@@ -87,6 +89,7 @@ export const heroes = [
         "name":"Bane",
         "primary_attr":"int",
         "attack_type":"Ranged",
+        "img": "https://user-images.githubusercontent.com/20388583/27767016-41b90b76-5eb4-11e7-8363-2058d4262070.png",
         "roles":[
             "Support",
             "Disabler",
@@ -114,6 +117,7 @@ export const heroes = [
         "name":"Bloodseeker",
         "primary_attr":"agi",
         "attack_type":"Melee",
+        "img": "https://user-images.githubusercontent.com/20388583/27767017-45e7b094-5eb4-11e7-8590-16111cab771e.png",
         "roles":[
             "Carry",
             "Disabler",
@@ -152,6 +156,7 @@ export const heroes = [
         "name":"Crystal Maiden",
         "primary_attr":"int",
         "attack_type":"Ranged",
+        "img": "https://user-images.githubusercontent.com/20388583/27767015-3d93e4bc-5eb4-11e7-9cb7-0bddb925990d.png",
         "roles":[
             "Support",
             "Disabler",
@@ -182,6 +187,7 @@ export const heroes = [
         "name":"Drow Ranger",
         "primary_attr":"agi",
         "attack_type":"Ranged",
+        "img": "https://user-images.githubusercontent.com/20388583/27767021-502ce376-5eb4-11e7-9678-f92e99c5f37f.png",
         "roles":[
             "Carry",
             "Disabler",

@@ -1,12 +1,15 @@
 <template>
-    <div id="app">
-        <h1>Dota 2 counter picker</h1>
-        <h3>Select the enemy heroes</h3>
-        <search></search>
-        <table class="grid">
-            <selected></selected>
-        </table>
-        <results></results>
+    <div id="app" class="container">
+        <h2>Dota 2 counter picker</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <search></search>
+            </div>
+            <div class="col-md-9">
+                <selected></selected>
+                <results></results>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -54,10 +57,11 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #2c3e50;
-        margin-top: 60px;
+        max-width: 980px;
+        padding: 15px;
     }
 
-    h1, h2 {
+    h2, h4 {
         font-weight: normal;
     }
 </style>

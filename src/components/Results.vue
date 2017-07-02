@@ -1,9 +1,12 @@
 <template>
-    <ul>
-        <li v-for="hero in results">
-            <div>{{ hero }}</div>
-        </li>
-    </ul>
+    <div v-if="selected.length !=0">
+        <h4>Recommended Heroes</h4>
+        <ul class="list-group">
+            <li class="list-group-item" v-for="hero in results">
+                <div>{{ hero }}</div>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
