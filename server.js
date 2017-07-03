@@ -1,6 +1,6 @@
-const express = require('express')
-    , router = express.Router()
-    , app = express();
+const express = require('express');
+const router = express.Router();
+const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8000;
 const heroes = require('./db/heroes');

@@ -85,7 +85,6 @@
         font-family: Arial;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: #2c3e50;
         max-width: 980px;
         padding: 15px;
         background-color: #FFFFFF !important;

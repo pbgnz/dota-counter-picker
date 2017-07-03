@@ -33,6 +33,10 @@
         list-style-type: none;
     }
 
+    ul.cell.row {
+        padding-left: 14px;
+    }
+
     p {
         text-align: center;
         font-family: 'Gochi Hand', sans-serif;
@@ -49,7 +53,7 @@
         position: relative;
         min-height: 1px;
         padding-right: 15px;
-        padding-left: 10px;
+        padding-left: 6px;
     }
 
     .col-xs-5ths {

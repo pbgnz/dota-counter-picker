@@ -45,25 +45,20 @@
                 this.display = this.results.slice(0,8);
             },
             updatePoints (pick) {
-                // create a dictionary and add +1 to all counters of the enemy hero
                 if(!this.points) this.points = {};
                 pick.forEach((hero) => Number.isInteger(this.points[hero]) ? this.points[hero]++
                     : this.points[hero] = 1);
             },
             optimizeResults () {
-                // sort the points dictionary in decreasing order of points
                 let unsorted = Object.keys(this.points).map((key) => {
                     return [key, this.points[key]];
                 }).sort((first, second) => {
                     return second[1] - first[1];
                 });
-                // returns a sorted array in the form of [['hero name', points], ...]
 
-                // create an array containing only the names of sorted results
                 let optimized = [];
                 unsorted.forEach((hero) => optimized.push(hero[0]));
 
-                // remove the selected enemy heroes from the recommendations
                 this.results = difference(optimized, this.selected);
             }
         },
@@ -80,7 +75,5 @@
 </script>
 
 <style>
-    .badge-default {
-        background-color: #0074D9;
-    }
+    .badge-default {  background-color: #2A77BC;  }
 </style>
