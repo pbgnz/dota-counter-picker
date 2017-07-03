@@ -1,4 +1,4 @@
-export const heroes = [
+module.exports = heroes = [
     {
         "id":1,
         "name":"Anti-Mage",

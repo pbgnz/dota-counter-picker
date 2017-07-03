@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import { heroes } from '../../db/heroes';
+    import heroes from '../../db/heroes';
     export default {
         data () {
             return {
@@ -24,7 +24,7 @@
         methods: {
             filterBy (list, value) {
                 value = value.charAt(0).toUpperCase() + value.slice(1);
-                return list.filter(function(hero) {
+                return list.filter((hero) => {
                     return hero.name.indexOf(value) > -1;
                 });
             },
@@ -43,7 +43,7 @@
 <style>
     .search {
         font-family: 'Gochi Hand', sans-serif;
-        max-height: 700px !important;
+        max-height: 900px !important;
     }
 
     input {

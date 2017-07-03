@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import { heroes } from '../../db/heroes';
+    import heroes from '../../db/heroes';
     export default {
         props: ['name'],
         data () {
@@ -36,6 +36,10 @@
     p {
         text-align: center;
         font-family: 'Gochi Hand', sans-serif;
+    }
+
+    img {
+        border-radius: 4px;
     }
 
     .col-xs-5ths,

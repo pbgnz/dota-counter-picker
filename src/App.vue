@@ -1,15 +1,21 @@
 <template>
-    <div id="app" class="container">
-        <h2>Dota 2 counter picker</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <search></search>
-            </div>
-            <div class="col-md-9">
-                <selected></selected>
-                <results></results>
+    <div id="app">
+        <div id="card" class="container">
+            <h2>Dota 2 counter picker</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <search></search>
+                </div>
+                <div class="col-md-9">
+                    <selected></selected>
+                    <results></results>
+                </div>
             </div>
         </div>
+        <p>
+            <a href="https://dota-counter-picker.herokuapp.com/api/heroes">api</a>
+            <a href="https://github.com/pbgnz/dota-counter-picker">github</a>
+        </p>
     </div>
 </template>
 
@@ -17,7 +23,7 @@
     import Search from './components/Search.vue';
     import Selected from './components/Selected.vue';
     import Results from './components/Results.vue';
-    import { heroes } from '../db/heroes';
+    import heroes from '../db/heroes';
     export default {
         name: 'app',
         components: { Search, Selected, Results },
@@ -52,16 +58,38 @@
 </script>
 
 <style>
-    #app {
+    h2, h4 {
+        font-weight: normal;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+        font-family: 'Gochi Hand', sans-serif !important;
+    }
+
+    @-webkit-keyframes pulse {
+        0% {background-color: #215788;}
+        25% {background-color: #104270;}
+        50% {background-color: #2A77BC;}
+        75% {background-color: #09243D;}
+        100% {background-color: #001f3f;}
+    }
+
+    body {
+        -webkit-animation: pulse 300s infinite alternate;
+    }
+
+    #card {
         font-family: Arial;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #2c3e50;
         max-width: 980px;
         padding: 15px;
-    }
-
-    h2, h4 {
-        font-weight: normal;
+        background-color: #FFFFFF !important;
+        border-radius: 4px;
+        margin-top: 5%;
     }
 </style>

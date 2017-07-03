@@ -9,12 +9,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="hero in results">
+            <tr v-for="hero in display">
                 <td>
                     {{ hero }}
                 </td>
                 <td>
-                    <span class="badge badge-default">+{{ points[hero] }}</span>
+                    <span class="badge badge-default">{{ Math.round(points[hero]/selected.length * 100) }}</span>
                 </td>
             </tr>
             </tbody>
@@ -24,7 +24,7 @@
 
 <script>
     import { union, difference } from 'lodash';
-    import { heroes } from '../../db/heroes';
+    import  heroes  from '../../db/heroes';
     export default {
         data () {
             return {
@@ -32,6 +32,7 @@
                 avoid: [],
                 selected: [],
                 results: [],
+                display: [],
                 points: {}
             }
         },
@@ -40,7 +41,8 @@
                 this.results = union(this.results, pick);
                 this.results = difference(this.results, avoid);
                 this.results = difference(this.results, selected);
-                this.optimizeResults()
+                this.optimizeResults();
+                this.display = this.results.slice(0,8);
             },
             updatePoints (pick) {
                 // create a dictionary and add +1 to all counters of the enemy hero
@@ -62,15 +64,15 @@
                 unsorted.forEach((hero) => optimized.push(hero[0]));
 
                 // remove the selected enemy heroes from the recommendations
-                this.results = difference(optimized, this.selected).slice(0,8);
+                this.results = difference(optimized, this.selected);
             }
         },
         created () {
             Event.$on('heroSelected', (heroArrayId) => {
                 this.selected = this.$parent.selected;
                 this.pick = heroes[heroArrayId].bad_against;
-                this.updatePoints(this.pick);
                 this.avoid = heroes[heroArrayId].good_against;
+                this.updatePoints(this.pick);
                 this.updateResults(this.pick, this.avoid, this.selected);
             })
         }
