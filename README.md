@@ -1,3 +1,6 @@
 ### dota-counter-picker  
 
-https://dota-counter-picker.herokuapp.com/
+APP: https://dota-counter-picker.herokuapp.com/  
+
+DOTA 2 HEROES API: https://dota-counter-picker.herokuapp.com/api/heroes
+

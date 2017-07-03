@@ -1,5 +1,8 @@
 <template>
     <div id="app">
+        <a href="https://github.com/pbgnz/dota-counter-picker">
+            <img src="http://tinyurl.com/kv8nu28" data-canonical-src="http://tinyurl.com/zartqjq" id="fork">
+        </a>
         <div id="card" class="container">
             <h2>Dota 2 counter picker</h2>
             <div class="row">
@@ -12,9 +15,6 @@
                 </div>
             </div>
         </div>
-        <p>
-            <a href="https://dota-counter-picker.herokuapp.com/api/heroes">api</a>
-        </p>
     </div>
 </template>
 
@@ -63,7 +63,7 @@
 
     a {
         text-decoration: none;
-        color: white;
+        color: black;
         font-size: 11px;
         font-family: 'Gochi Hand', sans-serif !important;
     }
@@ -89,5 +89,12 @@
         background-color: #FFFFFF !important;
         border-radius: 4px;
         margin-top: 5%;
+    }
+
+    #fork {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
     }
 </style>

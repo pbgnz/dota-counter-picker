@@ -31,6 +31,7 @@
             selectHero (heroArrayIndex) {
                 this.hero = heroes[heroArrayIndex];
                 this.$parent.selectedHero = heroArrayIndex;
+                this.filterInput = '';
                 if(this.number < 6) {
                     Event.$emit('selectHero', this.hero, this.number);
                     this.number++;
