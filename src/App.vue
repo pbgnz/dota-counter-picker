@@ -14,7 +14,6 @@
         </div>
         <p>
             <a href="https://dota-counter-picker.herokuapp.com/api/heroes">api</a>
-            <a href="https://github.com/pbgnz/dota-counter-picker">github</a>
         </p>
     </div>
 </template>
