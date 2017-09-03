@@ -1,10 +1,10 @@
 # dota counter picker
 
-> dota2 recommender web app and heroes api 
+> dota2 recommender web app
 
 recommender: https://dota-counter-picker.herokuapp.com/  
 
-free dota 2 heroes api: https://dota-counter-picker.herokuapp.com/api/heroes
+dota 2 heroes api: https://dota-counter-picker.herokuapp.com/api/heroes
 
 ## Build Setup
 
@@ -19,7 +19,7 @@ npm run dev
 npm run build
 
 # start node server at localhost:8000
-npm run start 
+npm run start
 ```
 
 For any questions, bugs, or suggestions please open an [issue](https://github.com/pbgnz/dota-counter-picker/issues).

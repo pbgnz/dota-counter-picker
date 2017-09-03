@@ -1,8 +1,5 @@
 <template>
     <div id="app">
-        <a href="https://github.com/pbgnz/dota-counter-picker">
-            <img src="http://tinyurl.com/kv8nu28" data-canonical-src="http://tinyurl.com/zartqjq" id="fork">
-        </a>
         <div id="card" class="container">
             <h2>Dota 2 counter picker</h2>
             <div class="row">
