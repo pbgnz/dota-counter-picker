@@ -4,7 +4,7 @@
 
 recommender: https://dota-counter-picker.herokuapp.com/  
 
-dota 2 heroes api: https://dota-counter-picker.herokuapp.com/api/heroes
+dota 2 heroes static api: https://dota-counter-picker.herokuapp.com/api/heroes
 
 ## Build Setup
 
