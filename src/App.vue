@@ -88,10 +88,4 @@
         margin-top: 5%;
     }
 
-    #fork {
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: 0;
-    }
 </style>
