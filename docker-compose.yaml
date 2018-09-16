@@ -1,7 +1,11 @@
 version: '3'
 services:
-  node-app:
-    restart: always
-    build: .
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - "8000:8000"
+    volumes:
+      - /app/node_modules
+      - .:/app
