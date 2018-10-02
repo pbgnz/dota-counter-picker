@@ -6,6 +6,13 @@ recommender: https://dota-counter-picker.herokuapp.com/
 
 dota 2 heroes static api: https://dota-counter-picker.herokuapp.com/api/heroes
 
+## Roadmap
+- [ ] Build a web-scraped api (issue #11)
+- [ ] Build multiple endpoints for the web-scraped api (issue #9 and issue #6)
+- [ ] Analyze the data from the web-scaped api and use it to build a custom heroes api
+- [ ] Use machine learning libraries on the data from the heroes api to make team draft predictions
+- [ ] Update UI
+
 ## Prerequisites
 - [node.js](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/get-npm)
