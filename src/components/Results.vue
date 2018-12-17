@@ -14,7 +14,7 @@
                     {{ hero }}
                 </td>
                 <td>
-                    <span class="badge badge-default">{{ Math.round(points[hero]/selected.length * 100) }}</span>
+                    <span class="badge badge-info">{{ Math.round(points[hero]/selected.length * 100) }}</span>
                 </td>
             </tr>
             </tbody>
