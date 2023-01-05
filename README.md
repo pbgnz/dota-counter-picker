@@ -2,9 +2,9 @@
 
 > dota2 recommender web app + api
 
-recommender: https://dota-counter-picker.herokuapp.com/  
+recommender: https://dota-counter-picker.onrender.com/ 
 
-dota 2 heroes static api: https://dota-counter-picker.herokuapp.com/api/heroes
+dota 2 heroes static api: https://dota-counter-picker.onrender.com/api/heroes
 
 ## Prerequisites
 - [node.js](https://nodejs.org/en/)
