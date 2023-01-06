@@ -1,10 +1,8 @@
 # dota counter picker
 
-> dota2 recommender web app + api
-
 recommender: https://dota-counter-picker.onrender.com/ 
 
-dota 2 heroes static api: https://dota-counter-picker.onrender.com/api/heroes
+static api [deprecated]: https://dota-counter-picker.onrender.com/api/heroes
 
 ## Prerequisites
 - [node.js](https://nodejs.org/en/)
@@ -12,35 +10,69 @@ dota 2 heroes static api: https://dota-counter-picker.onrender.com/api/heroes
 - [docker (optional)](https://www.docker.com/)
 - [docker-compose (optional)](https://docs.docker.com/compose/install/#install-compose)
 
-## Build Setup
+## Npm Setup
+
+install dependencies
 
 ``` bash
-# install dependencies
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+start node server at localhost:8000
 
-# build for production or node server with minification
-npm run build
-
-# start node server at localhost:8000
+``` bash
 npm run start
+```
+
+serve with hot reload at localhost:8080
+
+``` bash
+npm run dev
+```
+
+build for production or node server with minification
+
+``` bash
+npm run build
 ```
 
 ## Docker Setup
 
+build container
+
 ``` bash
-# start containers
+docker build -t pbgnz/dota-counter-picker .
+```
+
+run container
+
+``` bash
+docker run -p 8000:8000 pbgnz/dota-counter-picker
+```
+
+## Docker-Compose Setup
+
+start containers
+
+``` bash
 docker-compose up
+```
 
-# (re)build images and start containers
+(re)build images and start containers
+
+``` bash
 docker-compose up --build
+```
 
-# start containers in background
+start containers in background
+
+``` bash
 docker-compose up -d
+```
 
-# stop containers
+stop containers
+
+``` bash
 docker-compose down
 ```
 

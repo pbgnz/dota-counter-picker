@@ -9,6 +9,10 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname));
 app.use(router);
 
+router.get('/', (req, res) => {
+    res.send("index.html")
+});
+
 router.get('/api/heroes', (req, res) => {
     res.send({ status: 200, data: heroes })
 });
